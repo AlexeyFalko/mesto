@@ -1,0 +1,30 @@
+.element {
+  max-width: 880px;
+  margin: auto;
+  padding: 47.25px 0 0 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 17px;
+}
+
+@media screen and (max-width: 899px) {
+  .element {
+    margin: 0 19px 0 19px;
+  }
+}
+
+@media screen and (max-width: 881px) {
+  .element {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .element {
+    padding: 36px 0 0 0;
+  }
+
+}

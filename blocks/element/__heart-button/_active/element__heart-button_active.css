@@ -1,0 +1,11 @@
+.element__heart-button_active {
+    width: 22px;
+    height: 19px;
+    background-image: url(../../../../image/Heart__black.svg);
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    margin: 0 20px 0 0;
+}
