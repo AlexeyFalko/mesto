@@ -4,6 +4,7 @@
     background-image: url(../../../image/Close\ Icon.png);
     background-size: 32px 32px;
     background-position: center;
+    background-repeat: no-repeat;
     outline: none;
     border: none;
     background-color: transparent;

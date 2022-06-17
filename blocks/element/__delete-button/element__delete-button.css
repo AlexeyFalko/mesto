@@ -9,6 +9,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    background-repeat: no-repeat;
 }
 
 .element__delete-button:hover {
