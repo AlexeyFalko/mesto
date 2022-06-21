@@ -46,29 +46,31 @@ const initialCards = [
   },
 ];
 
+
+
 function createCards(item) {
-  const Card = elementTemplate.querySelector(".element__card").cloneNode(true);
-  Card.querySelector(".element__mask").src = item.link;
-  Card.querySelector(".element__mask").alt = item.name;
-  Card.querySelector(".element__text").innerText = item.name;
-  Card.querySelector(".element__heart-button").addEventListener(
+  const сard = elementTemplate.querySelector(".element__card").cloneNode(true);
+  сard.querySelector(".element__mask").src = item.link;
+  сard.querySelector(".element__mask").alt = item.name;
+  сard.querySelector(".element__text").innerText = item.name;
+  сard.querySelector(".element__heart-button").addEventListener(
     "click",
     function (evt) {
       evt.target.classList.toggle("element__heart-button_active");
     }
   );
-  Card.querySelector(".element__delete-button").addEventListener(
+  сard.querySelector(".element__delete-button").addEventListener(
     "click",
     function () {
-      deleteCard(Card);
+      deleteCard(сard);
     }
   );
-  Card.querySelector(".element__mask").addEventListener("click", function () {
+  сard.querySelector(".element__mask").addEventListener("click", function () {
     popupImageOpen(popupImage);
     popupImageImage.src = item.link;
     popupImageText.innerText = item.name;
   });
-  return Card;
+  return сard;
 }
 
 function renderCards(array) {
@@ -79,6 +81,22 @@ function renderCards(array) {
 
 renderCards(initialCards);
 
+
+function renderNewCard(item) {
+  cardsSection.prepend(item);
+}
+
+
+function cardsFormSubmitHandler(evt) {
+  evt.preventDefault();
+  const cardData = {name: cardsNameInput.value, link:cardsUrlInput.value}
+  createCards(cardData);
+  cardsPopupClose(popupPlace);
+  renderNewCard(createCards(cardData));
+}
+cardsForm.addEventListener("submit", cardsFormSubmitHandler);
+
+
 function formSubmitHandler(evt) {
   evt.preventDefault();
   nameInput.textContent = popupInputName.value;
@@ -87,38 +105,7 @@ function formSubmitHandler(evt) {
 }
 form.addEventListener("submit", formSubmitHandler);
 
-function renderNewCard(item) {
-  cardsSection.prepend(item);
-}
 
-function cardsFormSubmitHandler(evt) {
-  evt.preventDefault();
-  const Card = elementTemplate.querySelector(".element__card").cloneNode(true);
-  Card.querySelector(".element__mask").src = cardsUrlInput.value;
-  Card.querySelector(".element__mask").alt = cardsNameInput.value;
-  Card.querySelector(".element__text").innerText = cardsNameInput.value;
-  popupPlace.classList.remove("popup-place_open");
-  Card.querySelector(".element__heart-button").addEventListener(
-    "click",
-    function (evt) {
-      evt.target.classList.toggle("element__heart-button_active");
-    }
-  );
-  Card.querySelector(".element__delete-button").addEventListener(
-    "click",
-    function () {
-      deleteCard(Card);
-    }
-  );
-  Card.querySelector(".element__mask").addEventListener("click", function () {
-    popupImageOpen(popupImage);
-    popupImageImage.src = cardsUrlInput.value;
-    popupImageText.innerText = cardsNameInput.value;
-  });
-  renderNewCard(Card);
-}
-
-cardsForm.addEventListener("submit", cardsFormSubmitHandler);
 
 function deleteCard(item) {
   item.remove();
