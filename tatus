@@ -1,0 +1,41 @@
+[33mcommit 93af494cec52add76830670b9382a537a771dc49[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Tue Jun 21 22:42:47 2022 +0300
+
+    fix.дублирование
+
+[33mcommit f479872e1e83b5ae54980f0f0ae3a3518c9b59cd[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Mon Jun 20 01:23:36 2022 +0300
+
+    new.function
+
+[33mcommit 2203d46933e3cd66c03967e41f547168fab9661d[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Sat Jun 18 17:38:06 2022 +0300
+
+    fix.function
+
+[33mcommit 0942c1469a17f83c56685a3a65876daa91080ab5[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Fri Jun 17 18:23:02 2022 +0300
+
+    fix.repeat
+
+[33mcommit 0ab398167fce1e67530ff279c9618ab5492c6d37[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Fri Jun 17 17:42:21 2022 +0300
+
+    fix.imageCloseButton
+
+[33mcommit 46b734b24218a1d0696d5603f686951cadf41430[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Fri Jun 17 16:48:42 2022 +0300
+
+    First.iteration
+
+[33mcommit 345239e53ed7d504cae74f8ea857592967a0433e[m
+Author: Alexey Falko <falkoalesha@yandex.ru>
+Date:   Thu Jun 16 13:47:23 2022 +0300
+
+    fix.delete
